@@ -1,3 +1,11 @@
+
+/* reset do css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: linear-gradient(45deg, #8e2de2, #4a00e0);
   background-repeat: no-repeat;
@@ -7,8 +15,39 @@ body {
   font-family: Arial;
 }
 
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 .menu {
   background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu ul {
@@ -20,7 +59,13 @@ body {
   list-style: none;
 }
 
+.menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
 a {
+  color: #8e2de2;
   text-decoration: none;
 }
 
@@ -34,7 +79,15 @@ a:hover {
   text-align: center;
 }
 
+.site-title {
+  font-size: 4em;
+}
+
 .site-subtitle {
   font-style: italic;
 }
 
+.img-portfolio {
+  width: 180px;
+  height: 180px;
+}
